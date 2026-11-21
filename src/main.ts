@@ -17,4 +17,12 @@ const router = createRouter({
   },
 })
 
+router.beforeEach(to => {
+  if (to.name !== 'search' || typeof to.query.q !== 'string') return
+
+  const match = /^(?:!bsr\s+|bsr\s*)([0-9a-f]+)$/i.exec(to.query.q.trim())
+  const key = match?.[1]?.replace(/^0+(?=.)/, '').toLowerCase()
+  if (key && key.length <= 6) return { name: 'map', params: { key } }
+})
+
 createApp(App).use(router).mount('#app')

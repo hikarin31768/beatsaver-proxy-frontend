@@ -47,7 +47,9 @@ img { max-width: 100%; display: block; }
 .nav-link { display: inline-flex; align-items: center; gap: .5rem; color: #d8c8f4; font-size: .875rem; padding: .65rem 0; }
 .nav-link:hover, .back-link:hover { color: #fff; }
 .footer { color: var(--muted); font-size: .8125rem; border-top: 1px solid #312b40; }
-.footer-inner { min-height: 60px; }
+.footer-inner { min-height: 60px; justify-content: flex-end; }
+.footer-inner a { text-decoration: underline; text-underline-offset: 3px; }
+.footer-inner a:hover { color: #fff; }
 .home {
   flex: 1; position: relative; isolation: isolate; display: grid; place-items: center; overflow: hidden;
   padding: 70px 24px 110px; min-height: min(650px, calc(100svh - 60px));

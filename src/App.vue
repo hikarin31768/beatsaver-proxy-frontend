@@ -32,7 +32,7 @@ onBeforeUnmount(() => clearTimeout(timer))
         <RouterLink to="/" class="brand" aria-label="BeatSaver 谱面搜索首页">
           <img src="/beatsaver_logo.svg" alt="BeatSaver" width="130" height="34" />
         </RouterLink>
-        <RouterLink :to="{ name: 'search', query: route.name === 'search' ? route.query : {} }" class="nav-link">
+        <RouterLink v-if="route.name !== 'search'" :to="{ name: 'search' }" class="nav-link">
           <Icon name="search" /> 谱面搜索
         </RouterLink>
       </div>
@@ -41,7 +41,9 @@ onBeforeUnmount(() => clearTimeout(timer))
     <main id="main" class="main"><RouterView /></main>
 
     <footer class="footer">
-      <div class="wrap footer-inner"><span>BeatSaver 谱面搜索</span><span>数据来自 BeatSaver</span></div>
+      <div class="wrap footer-inner">
+        <a href="https://beatsaver.com/">数据来自 BeatSaver</a>
+      </div>
     </footer>
 
     <dialog ref="dialog" class="viewer-dialog" aria-labelledby="viewer-title"
