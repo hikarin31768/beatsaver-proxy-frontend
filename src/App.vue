@@ -42,6 +42,7 @@ onBeforeUnmount(() => clearTimeout(timer))
 
     <footer class="footer">
       <div class="wrap footer-inner">
+        <span>非官方镜像，与 BeatSaver 官方无关联</span>
         <a href="https://beatsaver.com/">数据来自 BeatSaver</a>
       </div>
     </footer>
