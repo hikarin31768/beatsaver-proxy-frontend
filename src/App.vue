@@ -4,6 +4,7 @@ import { RouterLink, RouterView, useRoute } from 'vue-router'
 import { mapTitle } from './beatSaver'
 import { usePlayback } from './usePlayback'
 import Icon from './components/Icon.vue'
+import BrandLogo from './components/BrandLogo.vue'
 
 const route = useRoute()
 const dialog = ref<HTMLDialogElement>()
@@ -29,8 +30,8 @@ onBeforeUnmount(() => clearTimeout(timer))
   <div class="shell">
     <header v-if="route.name !== 'home'" class="topbar">
       <div class="wrap topbar-inner">
-        <RouterLink to="/" class="brand" aria-label="BeatSaver 谱面搜索首页">
-          <img src="/beatsaver_logo.svg" alt="BeatSaver" width="130" height="34" />
+        <RouterLink to="/" class="brand" aria-label="BeatSaver 非官方镜像首页">
+          <BrandLogo />
         </RouterLink>
         <RouterLink v-if="route.name !== 'search'" :to="{ name: 'search' }" class="nav-link">
           <Icon name="search" /> 谱面搜索

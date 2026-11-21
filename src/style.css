@@ -43,7 +43,14 @@ img { max-width: 100%; display: block; }
 .topbar-inner, .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
 .topbar-inner { min-height: 66px; }
 .brand { display: inline-flex; align-items: center; flex: none; }
-.brand img { height: 34px; width: 130px; object-fit: contain; object-position: left; }
+.brand-mark { display: inline-grid; justify-items: end; gap: 3px; vertical-align: top; }
+.brand-mark img { width: 130px; height: auto; }
+.brand-mirror {
+  color: var(--accent); font: 700 .625rem/1 ui-monospace, monospace; letter-spacing: .16em;
+}
+.brand-mark-large { gap: 6px; }
+.brand-mark-large img { width: clamp(210px, 39vw, 310px); filter: drop-shadow(0 5px 20px #160f25a8); }
+.brand-mark-large .brand-mirror { font-size: .8125rem; }
 .nav-link { display: inline-flex; align-items: center; gap: .5rem; color: #d8c8f4; font-size: .875rem; padding: .65rem 0; }
 .nav-link:hover, .back-link:hover { color: #fff; }
 .footer { color: var(--muted); font-size: .8125rem; border-top: 1px solid #312b40; }
@@ -65,7 +72,6 @@ img { max-width: 100%; display: block; }
   mask-image: linear-gradient(120deg, #0000 12%, #000 39%, #000 64%, #0000 90%);
 }
 .home-content { width: min(100%, 660px); display: grid; justify-items: center; gap: 27px; }
-.home h1 img { width: clamp(210px, 39vw, 310px); height: auto; filter: drop-shadow(0 5px 20px #160f25a8); }
 .search-box {
   display: flex; align-items: center; gap: 12px; width: 100%; padding: 6px 6px 6px 15px;
   border: 1px solid #4c405f; background: #211c30; border-radius: 12px;
