@@ -34,8 +34,8 @@ npm run preview
 
 | 环境变量 | 本项目默认值 |
 | --- | --- |
-| `VITE_BEATSAVER_API_BASE` | `https://bsaver-proxy-esa.rayarksb.fun/api` |
-| `VITE_BEATSAVER_DOWNLOAD_BASE` | `https://bsaver-proxy-esa.rayarksb.fun` |
+| `VITE_BEATSAVER_API_BASE` | `https://api.bsaver-proxy/` |
+| `VITE_BEATSAVER_DOWNLOAD_BASE` | `https://bsaver-proxy` |
 | `VITE_BEATSAVER_MEDIA_ORIGIN` | 可选。默认使用下载地址的域名，媒体按来源选择 `/cfcdn`、`/cdn` 或 `/r2`。 |
 
 已登录 ESA CLI 时，也可以在完成本地构建后从项目根目录运行 `npx esa-cli deploy`。上线时给新 Pages 绑定独立域名，例如 `beatsaver.rayarksb.fun`。保持 `bsaver-proxy-esa.rayarksb.fun` 指向原反代。
